@@ -37,12 +37,12 @@ func init() {
 // StartServer starts server with REST handlers and initialise db connection pool
 func StartServer() {
 	r := mux.NewRouter()
-	r.HandleFunc("/rest/banks/", commonHeaders(getBanksHandler)).Methods("GET")
-	r.HandleFunc("/rest/banks/{id:[0-9]+}", commonHeaders(getBankByIDHandler)).Methods("GET")
-	r.HandleFunc("/rest/banks/", commonHeaders(createBankHanlder)).Methods("POST")
-	r.HandleFunc("/rest/banks/{id:[0-9]+}", commonHeaders(deleteBankByIDHandler)).Methods("DELETE")
-	r.HandleFunc("/rest/banks/{id:[0-9]+}", commonHeaders(updateBankHanlder)).Methods("PUT")
-	r.HandleFunc("/rest/banks/", commonHeaders(deleteAllBanksHandler)).Methods("DELETE")
+	r.HandleFunc("/api/banks/", commonHeaders(getBanksHandler)).Methods("GET")
+	r.HandleFunc("/api/banks/{id:[0-9]+}", commonHeaders(getBankByIDHandler)).Methods("GET")
+	r.HandleFunc("/api/banks/", commonHeaders(createBankHanlder)).Methods("POST")
+	r.HandleFunc("/api/banks/{id:[0-9]+}", commonHeaders(deleteBankByIDHandler)).Methods("DELETE")
+	r.HandleFunc("/api/banks/{id:[0-9]+}", commonHeaders(updateBankHanlder)).Methods("PUT")
+	r.HandleFunc("/api/banks/", commonHeaders(deleteAllBanksHandler)).Methods("DELETE")
 	log.Fatal(http.ListenAndServe(viper.GetString("server.port"), r))
 }
 

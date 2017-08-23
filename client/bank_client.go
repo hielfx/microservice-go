@@ -4,11 +4,12 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/pkg/errors"
 	"net/http"
+
+	"github.com/pkg/errors"
 )
 
-const baseURL string = "http://localhost:8080/rest/banks/"
+const baseURL string = "http://localhost:8080/api/banks/"
 
 type bank struct {
 	ID   int    `json:"id"`
