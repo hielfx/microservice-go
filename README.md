@@ -1,7 +1,6 @@
 # Golang CRUD Application Scaffold
 
 ## About
-This code is written with very little experience with Golang. I did my best. CRs and PRs always welcome :)
 
  - go 1.7,
  - gorilla mux for routing,
