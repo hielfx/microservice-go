@@ -7,7 +7,7 @@
  - sqlx for database access (mysql),
  - tests using testify library
  - pkg/errors for better error handling
- - spf13/viper for handling config files 
+ - spf13/viper for handling config files
  - glide for package management
  - dockerized environment
 
@@ -41,16 +41,16 @@ $ docker-compose stop
 # remove all containers
 $ docker-compose rm
 ```
- 
+
 ### single docker
  - Build app: &docker build -t golang:go-app .  && $docker run --name go-crud --network=host -it -d -p 8080:8080 golang:go-app
  - You can run localDB with: $docker run -d -p 3306:3306 --name mysql-db -e MYSQL_ROOT_PASSWORD=admin -d mysql:5.7
- 
+
 ### Run Locally:
  - start mysql on 3306 port (and execute db script - manually currently)
  - start app from IDE or after install with flag -env=dev and giving -configFilePath, ./go-crud-template -env=dev
- 
+
 ## Hints
  - My $GOPATH=$HOME/go
- - Project dir: /home/users/kgoralski/go/src/github.com/kgoralski/go-crud-template
+ - Project dir: /home/jhidalgo3/go/src/github.com/kgoralski/go-crud-template
  - Database inside Docker? [Be warned.](http://patrobinson.github.io/2016/11/07/thou-shalt-not-run-a-database-inside-a-container/)
